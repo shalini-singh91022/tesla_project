@@ -8,7 +8,12 @@ let attemt = 1;
 let currentques = 0;
 let started =false;
 
+
 // array of
+
+// question
+
+ 
 
 
 const questions =[
