@@ -6,7 +6,7 @@ let container = document.querySelector('.container');
 let score = 0;
 let attemt = 1;
 let currentques = 0;
-let started =false;
+let started =true;
 
 
 
