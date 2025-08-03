@@ -1,6 +1,6 @@
 * {
  text-align: center;
- margin: 10px;
+
 }
 .body {
  background-color:#8E9AAF ;
@@ -8,12 +8,19 @@
  padding: 30px;
  border-radius: 10px;
  overflow: hidden;
+ display: flex;
+ flex-direction: column;
+align-items: center;
+
 }
 .btn1 {
  border-radius: 10px;
  border:none;
- background-color:#CBC0D3 ;
+ background-color:#CBC0D3;
  height: 50px;
+ width: 30%;
+
+ min-width: fit-content;
  box-shadow: 3.0px 6.1px 6.1px lab(40.51% 7.34 -7.63 / 0.41);
 }
 
@@ -28,20 +35,35 @@
  display: flex;
  flex-direction: column;
  align-items: center;
+ width: 98%;
+ min-width: max-content;
+ justify-content: center;
+margin: auto;
 }
 #btn2 {
-  visibility: hidden;
-
+  margin: auto;
+/* position: relative;
+bottom: 70px; */
+display: none;
 }
 .ques {
- 
+ text-align: center;
  height: 90px;
  width: 90%;
  background-color:#CBC0D3 ;
  border-radius: 10px;
  box-shadow:3.0px 6.1px 6.1px lab(26.27% 7.02 -7.11 / 0.41);
-
+display: flex;
+flex-direction: column;
+justify-content: center;
+font-size:1.3rem;
   
+}
+ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
 }
 .option {
  height: 70px;
@@ -49,6 +71,7 @@
  background-color: white;
  border-radius: 10px;
  margin: 16px;
+ font-size: 1.rem;
  list-style: none;
  box-shadow:  
       0 1px 1px hsl(0deg 0% 0% / 0.075),
@@ -57,6 +80,10 @@
       0 8px 8px hsl(0deg 0% 0% / 0.075),
       0 16px 16px hsl(0deg 0% 0% / 0.075)
     ;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .score-card {
   width: 400px;
@@ -108,4 +135,62 @@ table {
 .clicked {
   background-color:#CBC0D3 !important;
   list-style: none;
-};
+}
+.restart {
+border-radius: 10px;
+ border:none;
+ background-color:#CBC0D3 ;
+ height: 50px;
+ box-shadow: 3.0px 6.1px 6.1px lab(40.51% 7.34 -7.63 / 0.41);
+}
+
+.restart:hover {
+ opacity: .7;
+}
+@media (max-width:802px) {
+  .container{
+    width:98%;
+    padding:10px;
+    margin: auto;
+  }
+  .ques {
+    font-size: .8em;
+    
+    width: 80%;
+    
+  }
+  ul{
+    
+    padding: 0;
+    margin: 0 auto;
+    list-style-type: none;
+  }
+  .option{
+      font-size: 1em;
+      min-height: 36px;
+      width: 90%;
+      padding: 4px 4px;
+    }
+    #timer {
+      font-size:1em
+    }
+    .score-card{
+      width: 50%;
+      min-width: max-content;
+    }
+}
+@media (max-height:550px){
+  .container{
+    min-height: fit-content;
+    padding: 20px;
+  }
+  .ques {
+    padding: 8px;
+    margin-top: 10px;
+    min-height: fit-content;
+  }
+  .score-card{
+    min-height: fit-content;
+    padding: 4px;
+  }
+}
